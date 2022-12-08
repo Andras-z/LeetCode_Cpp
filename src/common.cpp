@@ -142,3 +142,26 @@ void prettyPrintTree(TreeNode* node, string prefix, bool isLeft) {
         prettyPrintTree(node->left, prefix + (isLeft ? "    " : "│   "), true);
     }
 }
+
+void printNums(vector<int>& nums, int size)
+{
+    if (size == 0) {
+        size = nums.size();
+    }
+    cout << "[";
+    for (int i = 0; i < size; i++) {
+        cout << nums[i];
+        if (i != size - 1) {
+            cout << ",";
+        }
+    }
+    cout << "]" << endl;
+}
+
+void printMatrix(vector<vector<int>>& matrix)
+{
+    cout << "matrix:" << endl;
+    for (auto nums : matrix) {
+        printNums(nums, 0);
+    }
+}

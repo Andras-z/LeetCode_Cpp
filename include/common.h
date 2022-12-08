@@ -30,3 +30,7 @@ struct TreeNode {
 TreeNode* stringToTreeNode(string input);
 
 void prettyPrintTree(TreeNode* node, string prefix = "", bool isLeft = true);
+
+void printNums(vector<int>& nums, int size = 0);
+
+void printMatrix(vector<vector<int>>& matrix);
